@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Gerenciamento de Estoque</h1>
+        <form id="productForm" class="mb-3">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="productName" class="form-control" placeholder="Nome do Produto" required>
+                </div>
+                <div class="col">
+                    <input type="number" id="productPrice" class="form-control" placeholder="Preço" required>
+                </div>
+                <div class="col">
+                    <input type="number" id="productQuantity" class="form-control" placeholder="Quantidade" required>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Adicionar Produto</button>
+                </div>
+            </div>
+        </form>
+        
+        <h2>Produtos em Estoque</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody id="productList"></tbody>
+        </table>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
